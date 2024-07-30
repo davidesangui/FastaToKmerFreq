@@ -15,7 +15,7 @@ The output is a folder of Numpy arrays generated with the function numpy.save().
 When multiple cores are available, different Fasta files can be reduced in parallel.
 ## Usage
 FastaToKmerFreq.py requires three mandatory arguments:
-- ```-kmer_size``` Size of k-mers. Since all possible k-mers are stored in memory at once, increasing the k-mer size quickly increases memory consumption. A rough estimation of memory consumption can be performed with the following formula: 8 * numCores * (4^kmer_size)/2
+- ```-kmer_size``` Size of k-mers. Since all possible k-mers are stored in memory at once, increasing the k-mer size quickly increases memory consumption. A rough estimation of memory consumption can be performed with the following formula: kmer_size * numCores * (4^kmer_size)/2
 - ```-fasta_folder``` Path to folder containing (only) the fasta files to reduce to kmer frequencies.
 - ```-output_folder``` Path to output folder to store kmer frequencies and index file. Created if missing.
 
