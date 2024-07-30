@@ -1,0 +1,3 @@
+Ecoli.fna
+Paeruginosa.fna
+Senterica.fna
