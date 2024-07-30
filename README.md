@@ -9,7 +9,7 @@ pip install numpy
 ## How it works
 FastaToKmerFreq takes as input a folder of fasta files. All the contigs in each fasta file are reduced to a single set of k-mer frequencies representing the entire sequence stored in the the fasta file. The k-mer size is user-defined.  
 In theory, there are 4^kmer_size possible kmers. But when considering forward and reverse k-mers and palindromic k-mers, there is lower number of distinct k-mers (e.g with k=4, there are 136 distinct kmers; for more details: https://stackoverflow.com/questions/40952719/algorithm-to-collapse-forward-and-reverse-complement-of-a-dna-sequence-in-python).  
-FastaToKmerFreq reduces a sequence to a set of distinct k-mer frequencies.    
+FastaToKmerFreq reduces a sequence to a set of distinct k-mer frequencies by counting the k-mers in both the forward and reverse sequence.     
 The output is a folder of Numpy arrays generated with the function numpy.save(). Each output file is a Numpy array storing the k-mer frequencies of the corresponding sequence in fasta format.  
 When multiple cores are available, different Fasta files can be reduced in parallel.
 ## Usage
