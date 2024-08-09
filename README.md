@@ -23,7 +23,7 @@ FastaToKmerFreq.py requires three mandatory arguments:
 
 ```python3 FastaToKmerFreq.py -kmer_size 3 -fasta_folder .\genomes\ -output_folder example_output -p 3``` 
 
-```-p``` defines the number of processes for parallelization. Setting a number greater than the number of genomes is useless.  
+```-p``` defines the number of processes for parallelization. Setting a number greater than the number of fasta files is useless.  
 
 ### Output type  
 ```-output_type``` option allows to define the output type desired. Three different types are available:
